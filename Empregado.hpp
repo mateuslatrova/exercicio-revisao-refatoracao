@@ -14,7 +14,6 @@ class Empregado {
         double horasTrabalhadas;
 
     public:
-        Empregado();
         Empregado(std::string _nome, double _salario, double _horas);
         double pagamentoMes();
         virtual void imprimirAtributos() = 0;
