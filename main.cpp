@@ -1,6 +1,5 @@
 #include "Engenheiro.hpp"
 #include "Vendedor.hpp"
-#include "Empregado.hpp"
 #include <vector>
 
 int main() {
