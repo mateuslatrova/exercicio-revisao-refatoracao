@@ -14,8 +14,8 @@ int main() {
     vendedores.push_back(Vendedor("Jose Mormont", 25, 8, 3000)); 
     vendedores.push_back(Vendedor("Sonia Stark", 30, 8, 4000));    
 
-    for (auto engenheiro: engenheiros) engenheiro.imprimirAtributos();
-    for (auto vendedor: vendedores) vendedor.imprimirAtributos();
+    for (auto &engenheiro: engenheiros) engenheiro.imprimirAtributos();
+    for (auto &vendedor: vendedores) vendedor.imprimirAtributos();
 
     return 0;	
 }
