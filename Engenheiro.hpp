@@ -7,6 +7,7 @@ class Engenheiro : public Empregado {
         int projetos;
 
     public:
-        Engenheiro(std::string _nome, double _salario, int _projetos);
-        void imprimirAtributos(double horasTrabalhadas) override;
+        Engenheiro();
+        Engenheiro(std::string _nome, double _salario, double _horas, int _projetos);
+        void imprimirAtributos() override;
 };

@@ -1,24 +1,21 @@
 #include "Engenheiro.hpp"
 #include "Vendedor.hpp"
+#include <vector>
 
 int main() {
 
-    Engenheiro eng1("Joao Snow", 35, 3); 
-    eng1.imprimirAtributos(9.5);
+    std::vector<Engenheiro> engenheiros;
+    engenheiros.push_back(Engenheiro("Joao Snow", 35, 9.5, 3)); 
+    engenheiros.push_back(Engenheiro("Daniela Targaryen", 30, 8, 1)); 
+    engenheiros.push_back(Engenheiro("Bruno Stark", 30, 8, 2)); 
 
-    Engenheiro eng2("Daniela Targaryen", 30, 1); 
-    eng1.imprimirAtributos(8);  
-    Engenheiro eng3("Bruno Stark", 30, 2); 
-    eng1.imprimirAtributos(8);  
+    std::vector<Vendedor> vendedores;
+    vendedores.push_back(Vendedor("Tonho Lannister", 20, 6, 5000)); 
+    vendedores.push_back(Vendedor("Jose Mormont", 25, 8, 3000)); 
+    vendedores.push_back(Vendedor("Sonia Stark", 30, 8, 4000));    
 
-    Vendedor vend1("Tonho Lannister", 20, 5000);
-    vend1.imprimirAtributos(6);
-
-    Vendedor vend2("Jose Mormont", 25, 3000);
-    vend2.imprimirAtributos(8); 
-
-    Vendedor vend3("Sonia Stark", 30, 4000);
-    vend3.imprimirAtributos(8);  
+    for (auto engenheiro: engenheiros) engenheiro.imprimirAtributos();
+    for (auto vendedor: vendedores) vendedor.imprimirAtributos();
 
     return 0;	
 }

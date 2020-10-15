@@ -7,7 +7,8 @@ class Vendedor : public Empregado {
         double quotaMensalVendas;	  
 	
     public:
-        Vendedor(std::string _nome, double _salario, int _quota);
+        Vendedor();
+        Vendedor(std::string _nome, double _salario, double _horas, int _quota);
         double quotaTotalAnual();
-        void imprimirAtributos(double horasTrabalhadas) override;
+        void imprimirAtributos() override;
 };

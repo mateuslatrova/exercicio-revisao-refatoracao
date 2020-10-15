@@ -1,15 +1,22 @@
 #include "Empregado.hpp"
 
-Empregado::Empregado(std::string _nome, double _salario) {
-    this->nome = _nome;
-    this->salarioHora = _salario;
+Empregado::Empregado() { 
+    this->nome = "";
+    this->salarioHora = 0;
+    this->horasTrabalhadas = 0;
 }
 
-double Empregado::pagamentoMes(double horasTrabalhadas) {
-    double horasComBonus = horasTrabalhadas;
+Empregado::Empregado(std::string _nome, double _salario, double _horas) {
+    this->nome = _nome;
+    this->salarioHora = _salario;
+    this->horasTrabalhadas = _horas;
+}
+
+double Empregado::pagamentoMes() {
+    double horasComBonus = this->horasTrabalhadas;
     //Cálculo de hora extra (+50% se horasTrabalhadas > HORAS_PADRAO(8 horas))
-    if (horasTrabalhadas > HORAS_PADRAO) {
-        double horasExtras = horasTrabalhadas - HORAS_PADRAO;
+    if (this->horasTrabalhadas > HORAS_PADRAO) {
+        double horasExtras = this->horasTrabalhadas - HORAS_PADRAO;
         horasComBonus += (horasExtras / 2);
     }
 

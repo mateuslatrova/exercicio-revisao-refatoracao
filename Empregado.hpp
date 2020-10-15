@@ -11,11 +11,13 @@ class Empregado {
     protected:
         std::string nome;
         double salarioHora;    
+        double horasTrabalhadas;
 
     public:
-        Empregado(std::string _nome, double salario);
-        double pagamentoMes(double horasTrabalhadas);
-        virtual void imprimirAtributos(double horasTrabalhadas) = 0;
+        Empregado();
+        Empregado(std::string _nome, double _salario, double _horas);
+        double pagamentoMes();
+        virtual void imprimirAtributos() = 0;
 };
 
 #endif
