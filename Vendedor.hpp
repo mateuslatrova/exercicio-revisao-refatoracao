@@ -1,5 +1,6 @@
 #include <string>
 #include "Empregado.hpp"
+#define MESES 12
 
 class Vendedor : public Empregado {
 

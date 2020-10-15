@@ -1,13 +1,13 @@
 #include "Vendedor.hpp"
 
 Vendedor::Vendedor() :
-    Empregado::Empregado("", 0, 0), quotaMensalVendas(0) {};
+    Empregado("", 0, 0), quotaMensalVendas(0) {};
 
 Vendedor::Vendedor(std::string _nome, double _salario, double _horas, int _quota) :
-    Empregado::Empregado(_nome,_salario,_horas), quotaMensalVendas(_quota) {};
+    Empregado(_nome,_salario,_horas), quotaMensalVendas(_quota) {};
 
 double Vendedor::quotaTotalAnual() {
-    return this->quotaMensalVendas * 12;
+    return this->quotaMensalVendas * MESES;
 }
 
 void Vendedor::imprimirAtributos() {
